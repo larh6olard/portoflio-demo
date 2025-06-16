@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-arizonia: "Arizonia", cursive;
+  --font-inter: "Inter", sans-serif;
+  --font-arbutus: "Arbutus Slab", serif;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+.nav-bg {
+  background-image: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C);
+}
+
+.main-body {
+  background-position-x: center;
+  background-origin: content-box;
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 493px;
+  background: linear-gradient(#9bc0a4, #29965a),
+  url('../images/main-img.jpg'), url('../images/american-boy.png');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+@media screen and (max-width: 768px) {
+  .main-body {
+    background-image: url('../images/homepage-img-md.jpg');
+  }
+}
+
+.port-img {
+  width: 100%;
+  height: 230px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+  }
+}
+
+.grid-item:hover {
+  box-shadow: 0 0 10px 5px rgb(128, 128, 128, 0.5);
+  transition: all ease-out 0.2s;
+}
+
+.about-bg {
+  background: linear-gradient(to left, #05df72, #29965a)
+}
+
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    align-content: space-between;
+  }
+
+  .contact-flex {
+    flex-direction: column;
+  }
+
+  .about-img, .contact-item {
+    margin-top: 28px;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+  }
+}
+
+.services-item {
+  background: linear-gradient(to bottom, #74D7BB, #53C8B6, #29978a);
+}
+
